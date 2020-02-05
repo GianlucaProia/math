@@ -134,9 +134,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact</a>
                 </li>
-				<li class="nav-item">
+<!-- 				<li class="nav-item">
                   <a class="nav-link" href="contact.html">Login</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
                     <i class="ti-search"></i>
