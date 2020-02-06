@@ -24,7 +24,7 @@
 <link rel="stylesheet" type="text/css" href='<c:url value="/resources/css/style.css"/>' >
   </head>
 
-  <body>
+  <body> <%-- ${nome} --%>
     <!--================ Start Header Menu Area =================-->
     <header class="header_area white-header">
       <div class="main_menu">

@@ -12,6 +12,7 @@ public class HelloController {
 
 		ModelAndView model = new ModelAndView("first");
 		
+		model.addObject("nome", "Gianluca Proia");
 		return model;
 
 	}
