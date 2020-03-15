@@ -17,11 +17,12 @@ import com.github.sarxos.webcam.Webcam;
 public class HelloController {
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-	public ModelAndView getData() throws IOException {
+	public ModelAndView getData() {
 
 		ModelAndView model = new ModelAndView("first");
 		
 		// ====================================================================
+		// ATTIVA LA WEB CAM ALLA CHIAMATA DEL METODO...
 		Webcam webcam = Webcam.getDefault();
 		//webcam.setViewSize(WebcamResolution.VGA.getSize());
 		// Set dimensioni...
@@ -30,10 +31,15 @@ public class HelloController {
 		BufferedImage image = webcam.getImage();
 		
 		webcam.close();
-		ImageIO.write(image, "JPG", new File("C:\\Users\\Utente\\Desktop\\test.jpg"));
+		try {
+			ImageIO.write(image, "JPG", new File("C:\\Users\\Utente\\Desktop\\test.jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		// Stampa il nome della webcam: Webcam Logitech HD Webcam C525 0
-		System.out.println(webcam.toString());
+		//System.out.println(webcam.toString());
 		// ====================================================================
 		
 		model.addObject("nome", "Gianluca Proia");
