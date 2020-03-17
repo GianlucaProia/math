@@ -23,6 +23,11 @@ public class HelloController {
 		
 		// ====================================================================
 		// ATTIVA LA WEB CAM ALLA CHIAMATA DEL METODO...
+		// ==============================================
+		// Disattiva il thread per la ricerca dei devices...
+//		Webcam.getDiscoveryService().setEnabled(false);
+//		Webcam.getDiscoveryService().stop();
+		// ==============================================
 		Webcam webcam = Webcam.getDefault();
 		//webcam.setViewSize(WebcamResolution.VGA.getSize());
 		// Set dimensioni...
@@ -38,8 +43,12 @@ public class HelloController {
 			e.printStackTrace();
 		}
 		
+		// Si potrebbe mettere qui lo stop del find devices...
+		// Modo mogliore...
+		Webcam.getDiscoveryService().stop(); 
+		
 		// Stampa il nome della webcam: Webcam Logitech HD Webcam C525 0
-		//System.out.println(webcam.toString());
+		System.out.println("LA TELECAMERA INSTALLATA E': "+webcam.toString());
 		// ====================================================================
 		
 		model.addObject("nome", "Gianluca Proia");
