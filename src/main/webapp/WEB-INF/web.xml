@@ -29,7 +29,15 @@
 			org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
-  
+	
+  <!-- ============================================================================================== -->  
+  <!-- Inserisco un context che va ad inizializzare una servelt clas che contiene un thred... -->
+      <listener>
+        <listener-class>
+          math.com.controllers.MyServletContextListener
+        </listener-class>
+    </listener>
+  <!-- ============================================================================================== -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
