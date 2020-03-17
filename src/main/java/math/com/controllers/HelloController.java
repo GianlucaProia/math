@@ -24,7 +24,7 @@ public class HelloController {
 		// ====================================================================
 		// ATTIVA LA WEB CAM ALLA CHIAMATA DEL METODO...
 		// ==============================================
-		// Disattiva il thread per la ricerca dei devices...
+		// Disattiva il thread per la ricerca dei devices... si potrebbe fare alla fine
 //		Webcam.getDiscoveryService().setEnabled(false);
 //		Webcam.getDiscoveryService().stop();
 		// ==============================================
